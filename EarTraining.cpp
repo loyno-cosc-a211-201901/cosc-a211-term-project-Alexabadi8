@@ -21,7 +21,6 @@ void notes ()
     int noteG5 = 784;
     int noteA5 = 880;
     int noteB5 = 987;
-    int randomNumber = rand() % 7 + 1;
     while (menuselection != 0)
    {
         
@@ -36,6 +35,7 @@ void notes ()
                 {
                     case 1:
                     {
+                        int randomNumber = rand() % 7 + 1;
                         switch (randomNumber) // Plays Note//
                             {
                                 case 1: Beep(noteC4,3000);
@@ -69,6 +69,7 @@ void notes ()
                     case 2:
                     {
                         int octave = rand() % 2 + 1;
+                        int randomNumber = rand() % 7 + 1;
                         switch (randomNumber) // Plays Note//
                             {
                                 case 1: 
@@ -166,7 +167,6 @@ void keys()
     int noteA5 = 880;
     int noteAsharp5 = 932;
     int noteB5 = 987;
-    int randomNumber = rand() % 7 + 1;
     while (menuselection != 0)
    {
         
@@ -176,6 +176,7 @@ void keys()
         cin >> menuselection;
         if (menuselection == 1)
         {
+            int randomNumber = rand() % 7 + 1;
             {
                 switch (randomNumber) // Plays Note//
                     {
