@@ -54,7 +54,7 @@ void notes ()
                                 break;
                             }
                         cin.get();
-                        cout << "Enter your answer ";
+                        cout << "Enter your answer: ";
                         cin >> answer;
                         if (answer == 'c' && randomNumber == 1) cout << "Thats correct!" << endl;
                         else if (answer == 'd' && randomNumber == 2) cout << "Thats correct!" << endl;
@@ -115,7 +115,7 @@ void notes ()
                                 break;
                             }
                         cin.get();
-                        cout << "Enter your answer ";
+                        cout << "Enter your answer: ";
                         cin >> answer;
                         if (answer == 'c' && randomNumber == 1) cout << "Thats correct!" << endl;
                         else if (answer == 'd' && randomNumber == 2) cout << "Thats correct!" << endl;
@@ -265,7 +265,7 @@ void keys()
                             break;
                     }
                 cin.get();
-                cout << "Enter your answer ";
+                cout << "Enter your answer: ";
                 cin >> answer;
                 if (answer == 'c' && randomNumber == 1) cout << "Thats correct!" << endl;
                 else if (answer == 'd' && randomNumber == 2) cout << "Thats correct!" << endl;
@@ -277,7 +277,7 @@ void keys()
                 else cout << "Sorry thats incorrect!" << endl;
             }
         }  
-        else if (menuselection != 0)
+        else
         {
             cout << "Please choose a valid option" << endl;
             
@@ -288,22 +288,26 @@ void keys()
 int main()
 {
    int menuselection;
+   cout << "Welcome to the Ear Training Program!" << endl;
    while (menuselection != 0)
    {
-        cout << "Welcome to the Ear Training Program!" << endl;
         cout << "What would you like to practice today?" << endl;
         cout << "1. Notes" << endl;
         cout << "2. Keys" << endl;
         cout << "0. Quit" << endl;
         cin >> menuselection;
-        switch (menuselection)
+        if (menuselection == 1 || menuselection == 2)
         {
-            case 1: notes();
-                    break;
-            case 2: keys();
-                    break;
+            switch (menuselection)
+            {
+                case 1: notes();
+                        break;
+                case 2: keys();
+                        break;
 
-        } 
+            }     
+        }
+        else cout << "Please choose a valid option" << endl;
    }
    cout << "Thank you for using the Ear Training Program!" << endl;
     return 0;
