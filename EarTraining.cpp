@@ -28,7 +28,7 @@ const int noteA5 = 880;
 const int noteAsharp5 = 932;
 const int noteB5 = 987;
 
-void notes () // Runs the "notes" mode //
+void notes () // Runs the "notes" mode 
 {
     srand (time(0));
     int menuselection;
@@ -48,7 +48,7 @@ void notes () // Runs the "notes" mode //
                     case 1:
                     {
                         int randomNumber = rand() % 7 + 1;
-                        switch (randomNumber) // Plays Note//
+                        switch (randomNumber) // Plays Note
                             {
                                 case 1: Beep(noteC4,3000);
                                 break;
@@ -82,7 +82,7 @@ void notes () // Runs the "notes" mode //
                     {
                         int octave = rand() % 2 + 1;
                         int randomNumber = rand() % 7 + 1;
-                        switch (randomNumber) // Plays Note//
+                        switch (randomNumber) // Plays Note
                             {
                                 case 1: 
                                 {
@@ -150,7 +150,7 @@ void notes () // Runs the "notes" mode //
    }
 }
 
-void keys() // Runs the "keys" mode //
+void keys() // Runs the "keys" mode
 {
     srand (time(0));
     int menuselection;
@@ -166,9 +166,9 @@ void keys() // Runs the "keys" mode //
         {
             int randomNumber = rand() % 7 + 1;
             {
-                switch (randomNumber) // Plays Note//
+                switch (randomNumber) // Plays Note
                     {
-                        case 1: // Key of C//
+                        case 1: // Key of C
                         {
                             Beep(noteC4,750);
                             Beep(noteD4,750);
@@ -180,7 +180,7 @@ void keys() // Runs the "keys" mode //
                             Beep(noteC5,750);   
                         }
                             break;
-                       case 2: // Key of D//
+                       case 2: // Key of D
                         {
                             Beep(noteD4,750);
                             Beep(noteE4,750);
@@ -192,7 +192,7 @@ void keys() // Runs the "keys" mode //
                             Beep(noteD5,750);  
                         }
                              break;
-                        case 3: // Key of E//
+                        case 3: // Key of E
                         {
                             Beep(noteE4,750);
                             Beep(noteFsharp4,750);
@@ -204,7 +204,7 @@ void keys() // Runs the "keys" mode //
                             Beep(noteE5,750);   
                         }
                             break;
-                        case 4: // Key of F//
+                        case 4: // Key of F
                         {
                             Beep(noteF4,750);
                             Beep(noteG4,750);
@@ -216,7 +216,7 @@ void keys() // Runs the "keys" mode //
                             Beep(noteF5,750); 
                         }
                             break;
-                        case 5: // Key of G//
+                        case 5: // Key of G
                         {
                             Beep(noteG4,750);
                             Beep(noteA4,750);
@@ -228,7 +228,7 @@ void keys() // Runs the "keys" mode //
                             Beep(noteG5,750);  
                         }
                                 break;
-                        case 6: // Key of A//
+                        case 6: // Key of A
                         {
                             Beep(noteA4,750);
                             Beep(noteB4,750);
@@ -240,7 +240,7 @@ void keys() // Runs the "keys" mode //
                             Beep(noteA5,750);   
                             }
                                 break;
-                        case 7: // Key of B//
+                        case 7: // Key of B
                         {
                             Beep(noteB4,750);
                             Beep(noteCsharp5,750);
