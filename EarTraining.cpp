@@ -2,25 +2,37 @@
 #include <windows.h>
 #include <time.h>
 using namespace std;
-void notes ()
+
+const int noteC4 = 261;
+const int noteCsharp4 = 277;
+const int noteD4 = 293;
+const int noteDsharp4 = 311;
+const int noteE4 = 329;
+const int noteF4 = 349;
+const int noteFsharp4 = 369;
+const int noteG4 = 392;
+const int noteGsharp4 = 415;
+const int noteA4 = 440;
+const int noteAsharp4 = 466;
+const int noteB4 = 493;
+const int noteC5 = 523;
+const int noteCsharp5 = 554;
+const int noteD5 = 587;
+const int noteDsharp5 = 622;
+const int noteE5 = 659;
+const int noteF5 = 698;
+const int noteFsharp5 = 739;
+const int noteG5 = 784;
+const int noteGsharp5 = 830;
+const int noteA5 = 880;
+const int noteAsharp5 = 932;
+const int noteB5 = 987;
+
+void notes () // Runs the "notes" mode //
 {
     srand (time(0));
     int menuselection;
     char answer;
-    int noteC4 = 261;
-    int noteD4 = 293;
-    int noteE4 = 329;
-    int noteF4 = 349;
-    int noteG4 = 392;
-    int noteA4 = 440;
-    int noteB4 = 493;
-    int noteC5 = 523;
-    int noteD5 = 587;
-    int noteE5 = 659;
-    int noteF5 = 698;
-    int noteG5 = 784;
-    int noteA5 = 880;
-    int noteB5 = 987;
     while (menuselection != 0)
    {
         
@@ -130,7 +142,7 @@ void notes ()
                     }
                 }  
         }  
-        else
+        else if (menuselection != 0)
         {
             cout << "Please choose a valid option" << endl;
             
@@ -138,35 +150,11 @@ void notes ()
    }
 }
 
-void keys()
+void keys() // Runs the "keys" mode //
 {
     srand (time(0));
     int menuselection;
     char answer;
-    int noteC4 = 261;
-    int noteCsharp4 = 277;
-    int noteD4 = 293;
-    int noteDsharp4 = 311;
-    int noteE4 = 329;
-    int noteF4 = 349;
-    int noteFsharp4 = 369;
-    int noteG4 = 392;
-    int noteGsharp4 = 415;
-    int noteA4 = 440;
-    int noteAsharp4 = 466;
-    int noteB4 = 493;
-    int noteC5 = 523;
-    int noteCsharp5 = 554;
-    int noteD5 = 587;
-    int noteDsharp5 = 622;
-    int noteE5 = 659;
-    int noteF5 = 698;
-    int noteFsharp5 = 739;
-    int noteG5 = 784;
-    int noteGsharp5 = 830;
-    int noteA5 = 880;
-    int noteAsharp5 = 932;
-    int noteB5 = 987;
     while (menuselection != 0)
    {
         
@@ -180,7 +168,7 @@ void keys()
             {
                 switch (randomNumber) // Plays Note//
                     {
-                        case 1:
+                        case 1: // Key of C//
                         {
                             Beep(noteC4,750);
                             Beep(noteD4,750);
@@ -192,7 +180,7 @@ void keys()
                             Beep(noteC5,750);   
                         }
                             break;
-                       case 2:
+                       case 2: // Key of D//
                         {
                             Beep(noteD4,750);
                             Beep(noteE4,750);
@@ -204,7 +192,7 @@ void keys()
                             Beep(noteD5,750);  
                         }
                              break;
-                        case 3:
+                        case 3: // Key of E//
                         {
                             Beep(noteE4,750);
                             Beep(noteFsharp4,750);
@@ -216,7 +204,7 @@ void keys()
                             Beep(noteE5,750);   
                         }
                             break;
-                        case 4:
+                        case 4: // Key of F//
                         {
                             Beep(noteF4,750);
                             Beep(noteG4,750);
@@ -228,7 +216,7 @@ void keys()
                             Beep(noteF5,750); 
                         }
                             break;
-                        case 5:
+                        case 5: // Key of G//
                         {
                             Beep(noteG4,750);
                             Beep(noteA4,750);
@@ -240,7 +228,7 @@ void keys()
                             Beep(noteG5,750);  
                         }
                                 break;
-                        case 6:
+                        case 6: // Key of A//
                         {
                             Beep(noteA4,750);
                             Beep(noteB4,750);
@@ -252,7 +240,7 @@ void keys()
                             Beep(noteA5,750);   
                             }
                                 break;
-                        case 7:
+                        case 7: // Key of B//
                         {
                             Beep(noteB4,750);
                             Beep(noteCsharp5,750);
@@ -278,7 +266,7 @@ void keys()
                 else cout << "Sorry thats incorrect!" << endl;
             }
         }  
-        else
+        else if (menuselection != 0)
         {
             cout << "Please choose a valid option" << endl;
             
@@ -288,9 +276,9 @@ void keys()
 
 int main()
 {
-   int menuselection;
-   cout << "Welcome to the Ear Training Program!" << endl;
-   while (menuselection != 0)
+    int menuselection;
+    cout << "Welcome to the Ear Training Program!" << endl;
+    while (menuselection != 0)
    {
         cout << "What would you like to practice today?" << endl;
         cout << "1. Notes" << endl;
@@ -308,8 +296,8 @@ int main()
 
             }     
         }
-        else cout << "Please choose a valid option" << endl;
+        else if (menuselection != 0) cout << "Please choose a valid option" << endl;
    }
-   cout << "Thank you for using the Ear Training Program!" << endl;
+    cout << "Thank you for using the Ear Training Program!" << endl;
     return 0;
 }
