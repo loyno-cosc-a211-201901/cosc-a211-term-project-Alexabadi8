@@ -1,3 +1,4 @@
+//+PROF+ADW: Where is the file headers?
 #include <iostream>
 #include <windows.h>
 #include <time.h>
@@ -30,7 +31,7 @@ const int noteB5 = 987;
 
 void notes () // Runs the "notes" mode 
 {
-    srand (time(0));
+    srand (time(0));  //+PROF+ADW+: don't put srand here
     int menuselection;
     char answer;
     while (menuselection != 0)
@@ -39,6 +40,7 @@ void notes () // Runs the "notes" mode
         cout << "Select a dificulty level or press 0 to quit the program." << endl;
         cout << "1. Single octave" << endl;
         cout << "2. Double Octave" << endl;
+         //+PROF+ADW+: Quit here doesn't really quit but returns to main menu
         cout << "0. Quit" << endl;
         cin >> menuselection;
         if (menuselection == 1 || menuselection == 2)
@@ -65,8 +67,9 @@ void notes () // Runs the "notes" mode
                                 case 7: Beep(noteB4,3000);
                                 break;
                             }
-                        cin.get();
-                        cout << "Enter your answer: ";
+                        cin.get();  //+PROF+ADW+: confusing
+                        cout << "Enter your answer: ";  //+PROF+ADW+: You don't tell user how to enter or even 
+                                // that you want a note letter in lower case
                         cin >> answer;
                         if (answer == 'c' && randomNumber == 1) cout << "Thats correct!" << endl;
                         else if (answer == 'd' && randomNumber == 2) cout << "Thats correct!" << endl;
@@ -152,7 +155,7 @@ void notes () // Runs the "notes" mode
 
 void keys() // Runs the "keys" mode
 {
-    srand (time(0));
+    srand (time(0)); //+PROF+ADW+: do not put srand() in a subfunction - should only be run once
     int menuselection;
     char answer;
     while (menuselection != 0)
@@ -160,6 +163,7 @@ void keys() // Runs the "keys" mode
         
         cout << "Enter 1 to start or 0 to quit" << endl;
         cout << "1. Start" << endl;
+         //+PROF+ADW+: again, the "Quit" is not really quit, but return to main menu
         cout << "0. Quit" << endl;
         cin >> menuselection;
         if (menuselection == 1)
