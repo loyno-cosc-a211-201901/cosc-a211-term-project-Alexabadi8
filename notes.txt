@@ -1,0 +1,2 @@
+This works reasonably well, but the user interface is unclear.
+There is no file-header comment and comments are too sparse in the program.
